@@ -1,12 +1,11 @@
-```markdown
 # Projeto-X
 
 ## Equipe
 
-* Icaro Costa - Icaro-Costa
-* Arthur Estevão - ArthurEstevaum
-* Alvaro - Alvaro5801
-* Thays Costa - idthy
+* Icaro Costa - @Icaro-Costa
+* Arthur Estevão - @ArthurEstevaum
+* Alvaro - @Alvaro5801
+* Thays Costa - @idthy
 
 ## Informações da Disciplina
 
@@ -21,23 +20,25 @@ O jogo implementa mecânicas de combate baseadas em atributos como HP, Ataque e 
 
 ## Como Jogar (Regras e Interação)
 
-* Navegue pelos menus iniciais (Título, Dificuldade) usando Setas e Enter.
+* Navegue pelos menus iniciais (Título, Dificuldade) usando as **Setas** e **Enter**.
 * Em batalha, escolha suas ações a cada turno:
     * **Atacar:** Tenta causar dano ao inimigo baseado no seu Ataque e na rolagem d20 versus a Defesa do inimigo.
     * **Desdenhar/Taunt:** Aumenta a "Raiva" do inimigo, podendo causar efeitos variados (aumento de ataque, diminuição de defesa, ou até mesmo a derrota de um inimigo específico).
-    * **[Outras Ações, se houver, ex: Defender, Usar Item]**
+    * **[Outras Ações, se houver, ex: Defender, Usar Item]** *(Remova ou preencha)*
 * Monitore seu HP e o HP do inimigo.
 * Vença as 5 batalhas para completar o jogo!
 
 ## Compilação
 
 **Pré-requisitos:**
+
 * **Sistema Operacional:** Linux ou macOS (Este é um requisito da biblioteca CLI-lib).
     * *Nota: O desenvolvimento e testes foram realizados principalmente no **Ubuntu LTS** (ex: 22.04, 24.04). Outras distribuições Linux ou versões do macOS compatíveis devem funcionar.*
     * *Usuários de Windows precisarão usar uma Máquina Virtual (VM) com Linux ou o WSL (Windows Subsystem for Linux) para garantir a compatibilidade.*
 * Compilador C (como `gcc`)
 * Ferramenta `make`
-* Biblioteca `CLI-lib`.
+* Biblioteca `CLI-lib` (arquivos devem estar no repositório).
+* [Adicione qualquer outra dependência aqui, se houver]
 
 **Passos para Compilar:**
 
@@ -56,7 +57,6 @@ O jogo implementa mecânicas de combate baseadas em atributos como HP, Ataque e 
 Após a compilação bem-sucedida:
 
 1.  Navegue até a pasta raiz do projeto (se já não estiver lá).
-
 2.  Execute o jogo:
     ```bash
     ./build/projeto_x_rpg
@@ -64,8 +64,7 @@ Após a compilação bem-sucedida:
 
 ## Estrutura do Projeto
 
-```
-/projeto
+/Projeto-X
 ├── src/          # Código-fonte (.c) dos módulos do jogo
 ├── include/      # Arquivos de cabeçalho (.h)
 ├── data/         # Arquivos de configuração (.txt) para status iniciais
@@ -73,8 +72,7 @@ Após a compilação bem-sucedida:
 ├── build/        # Saídas de compilação (.o, executáveis) - Ignorado pelo Git
 ├── README.md     # Este arquivo
 ├── Makefile      # Arquivo para automatizar a compilação
-└── LICENSE       # Arquivo de licença
-```
+└── LICENSE       # Arquivo de licença (ex: MIT) - Opcional
 
 ## Ferramentas e Bibliotecas Utilizadas
 
@@ -83,4 +81,3 @@ Após a compilação bem-sucedida:
 * Build System: Make
 * Interface de Terminal: CLI-lib
 * Testes Unitários: Unity Framework
-```
