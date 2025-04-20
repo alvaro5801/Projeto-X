@@ -4,7 +4,7 @@
 
 * Icaro Costa - @Icaro-Costa
 * Arthur Estevão - @ArthurEstevaum
-* Alvaro - @Alvaro5801
+* Alvaro Silva - @Alvaro5801
 * Thays Costa - @idthy
 
 ## Informações da Disciplina
