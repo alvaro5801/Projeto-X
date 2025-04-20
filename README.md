@@ -65,14 +65,16 @@ Após a compilação bem-sucedida:
 ## Estrutura do Projeto
 
 /Projeto-X
-├── src/          # Código-fonte (.c) dos módulos do jogo
-├── include/      # Arquivos de cabeçalho (.h)
-├── data/         # Arquivos de configuração (.txt) para status iniciais
-├── test/         # Código dos testes unitários (Unity)
-├── build/        # Saídas de compilação (.o, executáveis) - Ignorado pelo Git
-├── README.md     # Este arquivo
-├── Makefile      # Arquivo para automatizar a compilação
-└── LICENSE       # Arquivo de licença (ex: MIT) - Opcional
+├── src/        # Código-fonte (.c) dos módulos do jogo
+├── include/    # Arquivos de cabeçalho (.h)
+├── data/       # Arquivos de configuração (.txt) para status iniciais
+├── test/       # Código dos testes unitários (Unity)
+├── build/      # Saídas de compilação (.o, executáveis) - Ignorado pelo Git
+├── README.md   # Este arquivo
+├── Makefile    # Arquivo para automatizar a compilação
+└── LICENSE     # Arquivo de licença (ex: MIT) - Opcional
+
+
 
 ## Ferramentas e Bibliotecas Utilizadas
 
