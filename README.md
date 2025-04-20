@@ -24,7 +24,6 @@ O jogo implementa mecânicas de combate baseadas em atributos como HP, Ataque e 
 * Em batalha, escolha suas ações a cada turno:
     * **Atacar:** Tenta causar dano ao inimigo baseado no seu Ataque e na rolagem d20 versus a Defesa do inimigo.
     * **Desdenhar/Taunt:** Aumenta a "Raiva" do inimigo, podendo causar efeitos variados (aumento de ataque, diminuição de defesa, ou até mesmo a derrota de um inimigo específico).
-    * **[Outras Ações, se houver, ex: Defender, Usar Item]** *(Remova ou preencha)*
 * Monitore seu HP e o HP do inimigo.
 * Vença as 5 batalhas para completar o jogo!
 
