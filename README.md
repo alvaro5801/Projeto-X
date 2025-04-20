@@ -38,7 +38,6 @@ O jogo implementa mecânicas de combate baseadas em atributos como HP, Ataque e 
 * Compilador C (como `gcc`)
 * Ferramenta `make`
 * Biblioteca `CLI-lib` (arquivos devem estar no repositório).
-* [Adicione qualquer outra dependência aqui, se houver]
 
 **Passos para Compilar:**
 
