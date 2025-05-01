@@ -10,17 +10,17 @@
 int main() {
     screenInit(0);
     keyboardInit();
-    timerInit(1000); // Intervalo de 1 segundo
+    timerInit(1000); // Initial timer interval (1 second)
 
     int vidaJogador = 100;
     int vidaMaximaJogador = 100;
     int tempoPassado = 0;
-    int timerInterval = 1000; // Intervalo de 1 segundo
-    int timerSpeed = 1;      // 1 = normal, >1 = acelerar, <1 = desacelerar
-    int paused = 0;          // 0 = não pausa, 1 = pausa
+    int timerInterval = 1000; // Current timer interval
+    int timerSpeed = 1;      // 1 = normal, >1 = speed up, <1 = slow down
+    int paused = 0;          // 0 = not paused, 1 = paused
 
     while (vidaJogador > 0) {
-        screenClear(); // Clear
+        screenClear(); // Clear the screen before drawing
         desenharBarraDeVida(10, 5, vidaJogador, vidaMaximaJogador);
         screenUpdate();
 
@@ -29,28 +29,30 @@ int main() {
                 vidaJogador -= 1;
                 tempoPassado++;
                 timerUpdateTimer(timerInterval);
-                //printf("Tempo: %d, Vida: %d, Interval: %d, Speed: %d, Paused: %d\n", tempoPassado, vidaJogador, timerInterval, timerSpeed, paused); // Debug
+                //printf("Tempo: %d, Vida: %d, Interval: %d, Speed: %d, Paused: %d\n",
+                //       tempoPassado, vidaJogador, timerInterval, timerSpeed, paused); // Debug
             }
         }
 
-        //  tecla de entrada
+        // Handle keyboard input
         if (keyhit()) {
             int key = readch();
-            switch (key) {/Resume
+            switch (key) {
+                case 'p': // Pause/Resume
                     paused = !paused;
                     break;
                 case 'o': // Speed up
                     if (timerInterval > 100) {
                         timerInterval -= 100;
                         timerSpeed++;
-                        timerUpdateTimer(timerInterval);// atualiza o cronometro
+                        timerUpdateTimer(timerInterval); // Update timer immediately
                     }
                     break;
-                case 'l': // deminuir a velocidade
+                case 'l': // Slow down
                     if (timerInterval < 5000) {
                         timerInterval += 100;
                         timerSpeed--;
-                        timerUpdateTimer(timerInterval); // atualiza o cronometro
+                        timerUpdateTimer(timerInterval); // Update timer immediately
                     }
                     break;
                 case 'q': // Quit
@@ -59,7 +61,7 @@ int main() {
             }
         }
 
-        usleep(10000); // Controla a velocidade do loop
+        usleep(10000); // Small delay to control loop speed
     }
 
     screenClear();
