@@ -3,6 +3,14 @@
 
 #include <stdio.h>
 
-void desenharBarraDeVida(int x, int y, int vidaAtual, int vidaMaxima);
+void realizarAtaque();
+
+void realizarDefesa();
+
+void realizarCura();
+
+void realizarCura();
+
+void realizarIrritar();
 
 #endif

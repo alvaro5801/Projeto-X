@@ -80,6 +80,8 @@ Após a compilação bem-sucedida:
 
 └── LICENSE     # Arquivo de licença (ex: MIT) - Opcional
 
+
+
 ## Ferramentas e Bibliotecas Utilizadas
 
 * Linguagem: C (Padrão C99/C11, etc.)
@@ -87,4 +89,3 @@ Após a compilação bem-sucedida:
 * Build System: Make
 * Interface de Terminal: CLI-lib
 * Testes Unitários: Unity Framework
-

@@ -38,11 +38,11 @@ int getTimeDiff()
 
 int timerTimeOver()
 {
-    int ret = 0;
+    int ret = 0; //Aqui era 0
 
     if (getTimeDiff() > delay)
     {
-        ret = 1;
+        ret = 1; //Aqui era 1
         gettimeofday(&timer, NULL);
     }
 
@@ -53,3 +53,24 @@ void timerPrint()
 {
     printf("Timer:  %d", getTimeDiff());
 }
+
+// ----------------------------------------------
+
+ /*
+ * Edição Necessária para fazer um dado aleatório com mais entropia.
+ */
+
+int DadoTimeOver()
+{
+    int ret = 1; //Aqui era 0
+
+    if (getTimeDiff() > delay)
+    {
+        ret = 2; //Aqui era 1
+        gettimeofday(&timer, NULL);
+    }
+
+    return ret;
+}
+
+// ----------------------------------------------
