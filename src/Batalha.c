@@ -1,7 +1,7 @@
 #include "../include/Batalha.h"
 #include "../include/screen.h"
-#include "../include/keyboard.h"
 #include "../include/timer.h"
+#include "../include/Dado.h"
 
 #include <stdio.h>
 #include <unistd.h>
@@ -13,36 +13,69 @@
 #define OPCOES_BOX_WIDTH   70 // Largura total, incluindo as bordas verticais
 #define OPCOES_BOX_HEIGHT  7  // Altura total, incluindo as bordas horizontais
 
-// --- Funções tampa burraco--- retorna somente o resultado se vai da dano, diminuir o dano etc..
-void realizarAtaque() {
-    screenGotoxy(OPCOES_BOX_START_X, OPCOES_BOX_START_Y + OPCOES_BOX_HEIGHT + 1);
-    screenSetColor(WHITE, BLACK);
-    printf("Atacou!           ");
-    screenUpdate();
-    usleep(1000000);
-}
+int realizarDefesa() {
 
-void realizarDefesa() {
+    int resultado = 0;
+    int dado = rolarDado20();
+
     screenGotoxy(OPCOES_BOX_START_X, OPCOES_BOX_START_Y + OPCOES_BOX_HEIGHT + 1);
     screenSetColor(WHITE, BLACK);
+
+    resultado = dado;
+
     printf("Você defendeu!          ");
     screenUpdate();
-    usleep(1000000);
+    usleep(50000);
+    return resultado;
 }
 
-void realizarCura() {
+int realizarAtaque() {
+
+    int resultado = 0;
+    int dado = rolarDado20();
+
+
     screenGotoxy(OPCOES_BOX_START_X, OPCOES_BOX_START_Y + OPCOES_BOX_HEIGHT + 1);
     screenSetColor(WHITE, BLACK);
+
+    resultado = dado;
+
+
+    printf("Atacou!           ");
+    screenUpdate();
+    usleep(50000);
+    return resultado;
+}
+
+
+int realizarCura() {
+    int resultado = 0;
+    int dado = rolarDado20();
+
+    screenGotoxy(OPCOES_BOX_START_X, OPCOES_BOX_START_Y + OPCOES_BOX_HEIGHT + 1);
+    screenSetColor(WHITE, BLACK);
+
+    resultado = dado;
+
     printf("Se curou!          ");
     screenUpdate();
-    usleep(1000000);
+    usleep(50000);
+    return resultado;
 }
 
-void realizarIrritar() {
+int realizarIrritar() {
+
+    int resultado = 0;
+    int dado = rolarDado20();
+
     screenGotoxy(OPCOES_BOX_START_X, OPCOES_BOX_START_Y + OPCOES_BOX_HEIGHT + 1);
     screenSetColor(WHITE, BLACK);
+
+    resultado = dado;
+
     printf("Irritou o inimigo! ");
     screenUpdate();
-    usleep(1000000);
+    usleep(50000);
+    return resultado;
 }
 // --------------------------------------------------------

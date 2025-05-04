@@ -14,7 +14,7 @@
 #define OPCOES_BOX_WIDTH   70 // Largura total, incluindo as bordas verticais
 #define OPCOES_BOX_HEIGHT  7  // Altura total, incluindo as bordas horizontais
 
-void gerenciarTurnoJogador() {
+int gerenciarTurnoJogador() {
     int key = 0;
 
     // Desenhar a linha divisória
@@ -35,23 +35,23 @@ void gerenciarTurnoJogador() {
             switch (key) {
                 case 'q':
                 case 'Q':
-                    realizarAtaque();
-                    return;
+
+                    return realizarAtaque();
 
                 case 'w':
                 case 'W':
-                    realizarDefesa();
-                    return;
+
+                    return realizarDefesa();
 
                 case 'e':
                 case 'E':
-                    realizarCura();
-                    return;
+
+                    return realizarCura();
 
                 case 'r':
                 case 'R':
                     realizarIrritar();
-                    return;
+                    return realizarIrritar();
 
                 case 'x':
                 case 'X':
@@ -60,8 +60,7 @@ void gerenciarTurnoJogador() {
                     printf("Saindo da batalha...");
                     screenUpdate();
                     usleep(1000000);
-                    // Adicione a lógica para sair aqui
-                    return;
+                    return 0;
             }
         }
         usleep(10000);

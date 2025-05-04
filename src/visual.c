@@ -97,4 +97,6 @@ void desenharBoxOpcoes() {
     printf("Aperte R para Irritar");
 
     screenSetColor(WHITE, BLACK); // Reseta a cor para o normal
+
+
 }

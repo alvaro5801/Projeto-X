@@ -3,14 +3,14 @@
 
 #include <stdio.h>
 
-void realizarAtaque();
+int realizarAtaque();
 
-void realizarDefesa();
+int realizarDefesa();
 
-void realizarCura();
+int realizarCura();
 
-void realizarCura();
+int realizarCura();
 
-void realizarIrritar();
+int realizarIrritar();
 
 #endif

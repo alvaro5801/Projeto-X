@@ -3,6 +3,6 @@
 
 #include <stdio.h>
 
-void gerenciarTurnoJogador();
+int gerenciarTurnoJogador();
 
 #endif
