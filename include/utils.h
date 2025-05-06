@@ -2,7 +2,9 @@
 #define UTILS_H
 
 #include <stdio.h>
+#include "../include/inimigo.h"
 
-int gerenciarTurnoJogador();
+int gerenciarTurnoJogador(Inimigo *inimigo, int *vidaJogador, int *vidaInimigo);
+void executarTurnoInimigo(Inimigo *inimigo, int *vidaJogador);
 
 #endif
