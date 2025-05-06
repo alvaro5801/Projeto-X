@@ -70,7 +70,7 @@ Após a compilação bem-sucedida:
 
 ├── data/       # Arquivos de configuração (.txt) para status iniciais
 
-├── test/       # Código dos testes unitários
+├── test/       # Código dos testes unitários (Unity)
 
 ├── build/      # Saídas de compilação (.o, executáveis) - Ignorado pelo Git
 
