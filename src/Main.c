@@ -2,6 +2,7 @@
 #include "../include/keyboard.h"
 #include "../include/utils.h"
 #include "../include/inimigo.h"
+#include "../include/GenTunInimigo.h"
 
 #include <stdio.h>
 #include <unistd.h>
@@ -12,7 +13,6 @@
 
 #include <stdbool.h>
 
-// Variáveis globais
 int posicao_X_jogador = 2;
 int posicao_Y_jogador = 14;
 int vida_Do_jogador = 100;
@@ -24,7 +24,7 @@ int posicao_X_inimigo = 51;
 int posicao_Y_inimigo = 14;
 int vida_do_inimigo = 150;
 int vida_maxima_do_inimigo = 150;
-int posicao_X_inimigo_boneco = 24;
+int posicao_X_inimigo_boneco = 37;
 int posicao_Y_inimigo_boneco = 1;
 
 void jogador() {
@@ -42,10 +42,11 @@ int main() {
     keyboardInit();
     srand(time(NULL));
 
-    Inimigo inimigo1;
-    inicializarInimigo(&inimigo1, 150, 20, 10);
-
     jogador();
+
+    Inimigo inimigo1;
+    inicializarInimigo(&inimigo1, 150, 10, 10);
+
     inimigo(&inimigo1);
 
     int resultadoBatalha = gerenciarTurnoJogador(&inimigo1, &vida_Do_jogador, &vida_do_inimigo);
